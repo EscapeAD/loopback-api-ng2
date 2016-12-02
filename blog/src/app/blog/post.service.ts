@@ -14,6 +14,8 @@ export class PostService {
 
   getPosts(): Observable<Post[]>{
     let url = "http://0.0.0.0:3000/api/posts";
-    return this.http.get(url, {headers: this.headers}).map
+    return this.http.get(url, {headers: this.headers}).map(res => res.json()).catch(err => {
+      return Observable.throw(err);
+    })
   }
 }
