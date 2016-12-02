@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService } from "./post.service";
+import { Post } from "./post";
 
 @Component({
   selector: 'app-blog',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  title: string = 'Blog';
+  posts: Post[] = [];
+
+  constructor(private postService: PostService) { }
 
   ngOnInit() {
   }
