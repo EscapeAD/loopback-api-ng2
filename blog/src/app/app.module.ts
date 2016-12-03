@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { BlogComponent } from './blog/blog.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 
 const appRoutes: Routes = [
   { path: 'blog', component: BlogComponent },
+  { path: 'blog/:id', component: PostDetailComponent },
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent }
 ];
@@ -21,7 +23,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     BlogComponent,
-    HomeComponent
+    HomeComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,
