@@ -8,10 +8,12 @@ import { BlogComponent } from './blog/blog.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { PostFormComponent } from './post-form/post-form.component';
 
 
 const appRoutes: Routes = [
   { path: 'blog', component: BlogComponent },
+  { path: 'blog/new', component: PostFormComponent },
   { path: 'blog/:id', component: PostDetailComponent },
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent }
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
     AppComponent,
     BlogComponent,
     HomeComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    PostFormComponent
   ],
   imports: [
     BrowserModule,

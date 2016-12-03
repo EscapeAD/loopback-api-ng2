@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.blog-list article{
+  border-bottom: 1px solid black;
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+}
