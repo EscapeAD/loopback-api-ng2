@@ -13,7 +13,7 @@ export class PostFormComponent implements OnInit {
 
   ngOnInit() {
   }
-
+ // on form submit
   onSubmit(){
     console.log(this.post);
   }

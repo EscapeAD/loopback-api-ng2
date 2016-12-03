@@ -9,8 +9,9 @@ import { Post } from "./post";
   providers: [PostService]
 })
 export class BlogComponent implements OnInit {
-
+  // title
   title: string = 'Blog';
+  // Post interface as a array
   posts: Post[] = [];
 
   constructor(private postService: PostService) { }

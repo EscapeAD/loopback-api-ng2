@@ -21,6 +21,7 @@ export class PostDetailComponent implements OnInit {
 
   ngOnInit() {
 
+    // on initial grab params and load post
     this.route.params.switchMap((params: Params) => {
       let id = params['id'];
       return this.postService.getPost(id);
